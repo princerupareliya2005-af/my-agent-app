@@ -378,7 +378,7 @@ export default function Home() {
 
         <main className="flex-1 overflow-y-auto flex flex-col">
           {!activeSession || activeSession.messages.length === 0 ? (
-            <WelcomeScreen />
+            <WelcomeScreen onSelectDemo={(repoUrl) => handleSendMessage(repoUrl)} />
           ) : (
             <div className="flex-1 py-4 divide-y divide-[var(--border-subtle)]">
               {activeSession.messages.map((message) => (
